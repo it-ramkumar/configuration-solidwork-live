@@ -1,0 +1,161 @@
+/* ================================
+   Page Wrapper
+================================ */
+.landing-scroll-wrapper {
+  min-height: 100vh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  background-color: #2F2F2F; /* light grey background */
+  padding: 3rem 2rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Page Title */
+.page-title {
+  font-size: 2rem;
+  letter-spacing: 1px;
+  color: #fffbfb;
+  position: relative;
+}
+
+.page-title::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 3px;
+  margin: 0.75rem auto 0;
+  background: #ff6600;
+  border-radius: 2px;
+}
+
+/* ================================
+   Flip Card Base
+================================ */
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 420px; /* 🔥 increased size */
+  perspective: 1000px;
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.flip-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 14px 26px rgba(0, 0, 0, 0.18);
+}
+
+/* Inner */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front & Back Common */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 20px;
+}
+
+/* ================================
+   Front Side
+================================ */
+.flip-card-front {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.25rem;
+  border: 1px solid #ddd;
+}
+
+.flip-img {
+  width: 100%;
+  height: 280px; /* 🔥 taller image */
+  object-fit: contain;
+  background: #fff;
+}
+
+.card-title-text {
+  margin-top: 1rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #222;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+/* ================================
+   Back Side
+================================ */
+.flip-card-back {
+  background: linear-gradient(135deg, #f1f1f1, #e1e1e1);
+  color: #333;
+  transform: rotateY(180deg);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flip-card-back h6 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 1rem;
+}
+
+.description-points li {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  text-align: left;
+  color: #444;
+}
+
+/* ================================
+   Mobile Flip Button (optional)
+================================ */
+.flip-all-btn-mobile {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  background-color: #ff6600;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.flip-all-btn-mobile:hover {
+  transform: rotate(180deg);
+  background-color: #e55300;
+}
+
+@media (min-width: 768px) {
+  .flip-all-btn-mobile {
+    display: none;
+  }
+}

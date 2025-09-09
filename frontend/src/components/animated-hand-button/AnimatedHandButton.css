@@ -1,0 +1,38 @@
+.animated-hand-wrapper {
+  background: white;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 0.4rem 1.4rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  width: fit-content;
+  overflow: hidden;
+}
+
+/* animated-hand-wrapper remains unchanged */
+
+.arrow-icon {
+  color: #1f1f1f;
+  cursor: pointer;
+}
+
+.animated-hand-icon {
+  display: inline-block;
+  /* No animation here */
+}
+
+/* Only apply animation when grab */
+.animate-swipe {
+  animation: swipe-hand 0.7s infinite ease-in-out;
+}
+
+
+@keyframes swipe-hand {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(10px); }
+  50% { transform: translateX(0); }
+  75% { transform: translateX(-10px); }
+  100% { transform: translateX(0); }
+}

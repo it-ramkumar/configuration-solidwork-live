@@ -1,0 +1,50 @@
+export const interiorTypes = [
+  "flooring",
+  "jumpseat",
+  "storage",
+  "curtain",
+  "swivelseat",
+  "dinette",
+  "cushion",
+  "swiveltable",
+  "bed",
+  "light",
+  "showerbox",
+  "kitchen",
+  "counter-top",
+  "Faucet",
+  "stove",
+  "countertop",
+  "appliance",
+  "sink-cover",
+  "wall-cabinet-kitchen",
+  "backsplash",
+  "partition-panel",
+  "wall-cabinet-driver",
+  "shower",
+  "wall-ceiling-door-panel",
+  "wall-ceiling",
+  "ceiling",
+  "wall-panel",
+  "door-panel"
+];
+export const exteriorTypes = [
+  "awning",
+  "storage-box",
+  "carrier",
+  "ladder",
+  "Popout",
+  "window",
+  "roof-rack",
+  "storage-box-thule",
+  "bicycle-l",
+  "bicycle-r",
+  "storage-box-r",
+  "storage-box-toper-r"
+];
+export const systemTypes = [
+  "climate-control",
+  "solar",
+  "ventilation"
+];
+

@@ -1,0 +1,43 @@
+/* Default desktop placement */
+.interior-toggle-btn-wrapper {
+  position: absolute;
+  bottom: 20px;
+  right: 35%;
+  z-index: 1000;
+}
+
+/* Mobile-specific override */
+@media (max-width: 768px) {
+  .interior-toggle-btn-wrapper {
+    top: 400px;
+    right: 15px;
+    bottom: auto;
+    left: auto;
+  }
+
+  .interior-toggle-btn-wrapper button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* Animated Hand */
+.animated-hand-position {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* For screen widths above 700px */
+@media (min-width: 701px) {
+  .animated-hand-position {
+    left: -360px;
+  }
+}
+
+/* For screen widths 700px and below */
+@media (max-width: 700px) {
+  .animated-hand-position {
+    left: -260px;
+  }
+}

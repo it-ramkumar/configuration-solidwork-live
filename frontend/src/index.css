@@ -1,0 +1,14 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #2f2f2f, #1c1c1c); /* graphite grey */
+  color: #f1f1f1; /* light text for contrast */
+}
+
+#root {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}

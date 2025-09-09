@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
+
+@import "tailwindcss";
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/600.css";
+@import "@fontsource/inter/700.css";
+
+/* ================= Graphite Grey Theme ================== */
+
+body {
+  background-color: #2F2F2F; /* Deep Graphite Grey */
+  color: #F5F5F5; /* Soft white text */
+  font-family: 'Inter', sans-serif;
+}
+
+.logo-text {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px;
+  letter-spacing: 2px;
+  color: #D9D9D9; /* Lighter graphite grey */
+}
+
+/* Headings with metallic graphite shine */
+.metallic-black-heading {
+  background: linear-gradient(
+    90deg,
+    #1C1C1C 0%,
+    #3A3A3A 25%,
+    #5A5A5A 50%,
+    #7A7A7A 75%,
+    #3A3A3A 100%
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: metallic-shine 4.5s linear infinite;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+@keyframes metallic-shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* ================= Utility ================== */
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes pulseZoom {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.07);
+  }
+}
+
+@keyframes spin-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.animate-spin-slow {
+  animation: spin-slow 6s linear infinite;
+}
+
+/* ================= Buttons ================== */
+
+.desktop-configure-button,
+.configure-button {
+  padding: 12px 32px;
+  background-color: #3A3A3A; /* graphite button */
+  color: #F5F5F5;
+  font-weight: bold;
+  border: none;
+  border-radius: 9999px; /* FULLY ROUNDED */
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  animation: pulseZoom 2s infinite;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.desktop-configure-button:hover,
+.configure-button:hover {
+  background-color: #4A4A4A;
+  transform: scale(1.05);
+}
+
+.desktop-configure-button .button-overlay,
+.configure-button .button-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.15), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.desktop-configure-button:hover .button-overlay,
+.configure-button:hover .button-overlay {
+  opacity: 1;
+}
+
+a {
+  text-decoration: none !important;
+  color: inherit;
+}
+
+/* ================= Sticky Button ================== */
+
+.sticky-configure-button {
+  position: relative;
+  padding: 0.75rem 1.8rem;
+  font-weight: bold;
+  color: #F5F5F5;
+  background-color: rgba(48, 48, 48, 0.8); /* graphite semi-transparent */
+  border: none;
+  border-radius: 32px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  overflow: hidden;
+  z-index: 10;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sticky-configure-button:hover {
+  background-color: rgba(74, 74, 74, 0.9);
+}
+
+.sticky-configure-button .button-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.12),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.sticky-configure-button:hover .button-overlay {
+  opacity: 1;
+}

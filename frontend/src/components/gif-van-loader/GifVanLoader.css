@@ -1,0 +1,27 @@
+/* Base container */
+.gif-loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #e5e7eb;
+}
+
+/* Keep van image width 50% on all screens */
+.gif-loader-image {
+  width: 50%;
+}
+
+/* Text styling */
+.gif-loader-text {
+  font-size: 0.875rem;
+  color: #9ca3af;
+  margin-top: -20px;
+}
+
+/* Only affect container height on mobile */
+@media (max-width: 768px) {
+  .gif-loader-container {
+    height: 50vh;
+  }
+}

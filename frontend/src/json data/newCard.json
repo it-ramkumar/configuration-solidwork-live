@@ -1,0 +1,22 @@
+{
+    "cards": [
+        {
+            "layout": "Premium Layout",
+            "price": 98000,
+            "shortDescription": "Dinette bed, elevator bed, aluminum bathroom, kitchen with fridge and induction, electrical setup, air heater, wall cabinets, partition walls included",
+            "img": "./layout/layout5.png",
+            "includes": [
+                "Dinette S/N that converts to bed from rear doors to sliding door",
+                "Elevator bed S/N",
+                "Aluminum bathroom on driver side by the partition wall",
+                "Kitchen sink cabinet behind the driver seat",
+                "Kitchen fridge cabinet with induction on top on the passenger side",
+                "Electrical set up: 600 amp hours, 2000 inverter, DCDC charger, 12v fridge chest like in the bench",
+                "Air Heater under the passenger seat",
+                "Wall cabinets on the Driver side above kitchen",
+                "Two partition walls"
+            ],
+            "colors": "Different colors"
+        }
+    ]
+}
