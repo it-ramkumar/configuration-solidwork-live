@@ -30,7 +30,7 @@ import InteriorCameraControls from "./VanInteriorCameraControls";
 import ExteriorCameraControls from "./VanExteriorCameraControl";
 import SpotLightCom from "./VanSpotsLight";
 import InteriorDirectionButton from "../buttons/InteriorDirectionButton";
-import { interiorDirectionBack } from "../../customeHooks/interiorDirectionback";
+import { interiorDirectionBack } from "../../customeHooks/interiorDirectionBack";
 import { interiorDirectionNext } from "../../customeHooks/interiorDirectionNext";
 import NextBackButton from "../multi-step-form/MultiStepPaginationButtons";
 import CameraAssigner from "../camara-assigner/CameraAssigner";
