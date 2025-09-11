@@ -36,10 +36,10 @@ import BackCarrier from "./components/ex-model-components/BackCarrier";
 import PopoutWindows from "./components/ex-model-components/PopoutWindows";
 import { BubbleWindow } from "./components/ex-model-components/BubbleWindow";
 // newly added models
-import BacksplashFour from "./components/in-model-components/BacksplashFour";
-import BacksplashOne from "./components/in-model-components/BacksplashOne";
-import BacksplashThree from "./components/in-model-components/BacksplashThree";
-import BacksplashTwo from "./components/in-model-components/BacksplashTwo";
+import BacksplashFour from "./components/in-model-components/BackSplashFour";
+import BacksplashOne from "./components/in-model-components/BackSplashOne";
+import BacksplashThree from "./components/in-model-components/BackSplashThree";
+import BacksplashTwo from "./components/in-model-components/BackSplashTwo";
 import BenchOne from "./components/in-model-components/BenchOne";
 import BenchThree from "./components/in-model-components/BenchThree";
 import BenchTwo from "./components/in-model-components/BenchTwo";

@@ -1,4 +1,4 @@
-import './GIFVanLoader.css';
+import './GifVanLoader.css';
 
 const GIFVanLoader = () => {
   return (

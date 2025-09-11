@@ -85,12 +85,6 @@ const MultiStepForm = ({
     steps = systemSteps;
   }
 
-
-
-
-
-
-
   const progressPercent = Math.round(((currentStep + 1) / steps.length) * 100);
 
 

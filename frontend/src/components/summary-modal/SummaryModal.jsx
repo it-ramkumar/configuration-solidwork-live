@@ -5,7 +5,10 @@ import Swal from "sweetalert2";
 import { handleGetQuote } from '../../customeHooks/handleQuote.js';
 import { useNavigate } from 'react-router-dom';
 
-export default function SummaryModal({ SummaryModal, setSummaryModal, sceneRef,
+export default function SummaryModal({
+  SummaryModal,
+  setSummaryModal,
+  sceneRef,                // 👈 use groupRef directly
   setUploadProgress,
   setIsUploading,
   setUploadSuccess,
@@ -85,12 +88,12 @@ export default function SummaryModal({ SummaryModal, setSummaryModal, sceneRef,
                           >
                             View Details
                           </button>
-                          <button
+                          {/* <button
                             onClick={() => handleRemoveItem(item.label)}
                             className="text-red-600 hover:text-red-700 font-medium"
                           >
                             Remove
-                          </button>
+                          </button> */}
                         </div>
                       </div>
                     </div>
