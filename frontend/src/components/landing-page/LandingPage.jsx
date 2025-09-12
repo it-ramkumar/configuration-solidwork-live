@@ -14,7 +14,7 @@ const LandingPage = () => {
       <div className="d-flex align-items-center justify-content-center min-vh-90">
         <div className="container">
           <h3 className="text-center py-3 mb-4 fw-bold text-uppercase page-title">
-            Santa Monica Premium
+            Santa Monica Premium------
           </h3>
 
           <div className="row g-4 justify-content-center">
