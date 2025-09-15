@@ -159,14 +159,14 @@ export default function VanModel({ showExterior }) {
   const normalMatrix = new THREE.Matrix3();
   const meshNormal = new THREE.Vector3();
 
-  const isFacingCamera = (mesh, normalDirection) => {
-    if (!mesh) return false;
-    mesh.getWorldPosition(meshWorldPosition);
-    vectorToCamera.subVectors(camera.position, meshWorldPosition).normalize();
-    normalMatrix.getNormalMatrix(mesh.matrixWorld);
-    meshNormal.copy(normalDirection).applyMatrix3(normalMatrix).normalize();
-    return meshNormal.dot(vectorToCamera) > 0.3;
-  };
+  // const isFacingCamera = (mesh, normalDirection) => {
+  //   if (!mesh) return false;
+  //   mesh.getWorldPosition(meshWorldPosition);
+  //   vectorToCamera.subVectors(camera.position, meshWorldPosition).normalize();
+  //   normalMatrix.getNormalMatrix(mesh.matrixWorld);
+  //   meshNormal.copy(normalDirection).applyMatrix3(normalMatrix).normalize();
+  //   return meshNormal.dot(vectorToCamera) > 0.3;
+  // };
 
   const parts = [
     { ref: driverSideRef, normal: new THREE.Vector3(1, 0, 0) },
@@ -175,18 +175,18 @@ export default function VanModel({ showExterior }) {
     { ref: rearDoorRef, normal: new THREE.Vector3(0, 0, -1) },
   ];
 
-  useFrame(() => {
-    if (!groupRef.current) return;
-    if (!showExterior) {
-      parts.forEach(({ ref, normal }) => {
-        if (ref.current) ref.current.visible = !isFacingCamera(ref.current, normal);
-      });
-    } else {
-      parts.forEach(({ ref }) => {
-        if (ref.current) ref.current.visible = true;
-      });
-    }
-  });
+  // useFrame(() => {
+  //   if (!groupRef.current) return;
+  //   if (!showExterior) {
+  //     parts.forEach(({ ref, normal }) => {
+  //       if (ref.current) ref.current.visible = !isFacingCamera(ref.current, normal);
+  //     });
+  //   } else {
+  //     parts.forEach(({ ref }) => {
+  //       if (ref.current) ref.current.visible = true;
+  //     });
+  //   }
+  // });
 
   return (
     <group rotation={[0, 0, 0]} ref={groupRef} dispose={null}>

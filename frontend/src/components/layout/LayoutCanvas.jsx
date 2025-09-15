@@ -551,7 +551,7 @@ const LayoutCanvas = () => {
         >
           <group
             ref={groupRef}
-            position={isIntView ? [0, -1.7, 0] : [0, -1.3, 0]}
+            position={isIntView ? [0, -1.7, 0] : [0, -0.4, 0]}
           >
             {addedModels.length > 0 ? (
               <>

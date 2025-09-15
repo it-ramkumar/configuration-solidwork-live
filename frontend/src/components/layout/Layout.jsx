@@ -274,7 +274,7 @@ const Layout = () => {
                 <VanModelCanvas />
               </div>
 
-              <div className="p-4 relative z-20">
+              {/* <div className="p-4 relative z-20">
                 {selectedFeature ? (
                   <>
                     <h3>{selectedFeature.label || selectedFeature.title}</h3>
@@ -283,7 +283,7 @@ const Layout = () => {
                 ) : (
                   <p className="text-neutral-500 text-sm italic">Select a feature to preview</p>
                 )}
-              </div>
+              </div> */}
             </div>
 
             <div className="mb-2 px-4">
