@@ -344,7 +344,7 @@ const Layout = () => {
 
         {!isConfigureNowVisible && (
           <div className="fixed bottom-4 right-4 z-50">
-            <button
+            {/* <button
               className="sticky-configure-button"
               onClick={() => {
                 if (desktopConfigureNowRef.current) {
@@ -357,7 +357,7 @@ const Layout = () => {
             >
               <span className="relative z-10">Configure More</span>
               <div className="button-overlay"></div>
-            </button>
+            </button> */}
           </div>
         )}
       </main>

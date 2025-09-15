@@ -210,8 +210,6 @@ function Van() {
   />
 </div>
 
-
-
   {isIntView && (
     <div
       className="d-flex flex-column gap-3"
@@ -226,7 +224,6 @@ function Van() {
       <InteriorDirectionButton onClick={() => interiorDirectionBack(camPros, setTargetPos)} label="▲" />
       <InteriorDirectionButton onClick={() => interiorDirectionNext(camPros, setTargetPos)} label="▼" />
     </div>
-
 
         )}
 
