@@ -518,8 +518,8 @@ const LayoutCanvas = () => {
       style={{
         position: "relative",
         width: "100%",
-        height: "80vh",
-        //overflow: "hidden",
+        height: "100vh",
+        overflow: "hidden",
       }}
     >
       {/* Canvas */}
@@ -625,42 +625,38 @@ const LayoutCanvas = () => {
 
       {/* Bottom Buttons (always visible) */}
       <div
-        style={{
-          position: "absolute",
-          bottom: "20px",
-          left: "50%",
-          //transform: "translateX(-50%)",
-          display: "flex",
-          flexDirection: "row",
-          zIndex: 1000,
-        }}
-      ><div style={{
-          //transform: "translateX(-50%)",
-          display: "flex",
+  style={{
+    position: "fixed", // <--- change absolute → fixed
+    bottom: "50px",
+    left: "30%",
+    transform: "translateX(-50%)",
+    display: "flex",
+    flexDirection: "row",
+    gap: "5px",
+    zIndex: 1000, // <--- very high so it's always on top
+    pointerEvents: "auto", // ensure buttons stay clickable
+  }}
+>
+  {/* Order Now */}
+  <button
+    onClick={() => setSummaryModal(true)}
+    className="px-6 py-3 bg-black text-white font-semibold !rounded-full shadow-md hover:bg-gray-800 transition-all duration-300"
+  >
+    Order Now
+  </button>
 
-          
-        }}>
-        {/* Order Now */}
-        <button
-          className="btn btn-dark shadow-sm btn-quote"
-          onClick={() => setSummaryModal(true)}
-          style={{ padding: "10px 25px", borderRadius: "12px" }}
-        >
-          Order Now
-        </button>
+  {/* Interior View Toggle */}
+  <button
+    onClick={() => setIsIntView(!isIntView)}
+    className="px-6 py-3 bg-gray-200 text-black font-semibold !rounded-full shadow-md hover:bg-gray-200 transition-all duration-300"
+  >
+    {isIntView ? "Exit Interior" : "Interior View"}
+  </button>
 
-        {/* Interior View Toggle */}
-        {/* <button
-          onClick={() => setIsIntView(!isIntView)}
-          text={isIntView ? "Exit Interior" : "Interior View"}
-        /> */}
-
-        <button className="w-full bg-amber-50" onClick={() => setIsIntView(!isIntView)}>{isIntView ? "Exit Interior" : "Interior View"}</button>
-</div>
-        {/* Interior Direction Buttons */}
-        {isIntView && (
-          <div>
-            <InteriorDirectionButton
+  {/* Interior Direction Buttons (shown only when in Interior View) */}
+  {isIntView && (
+    <div className="flex gap-2">
+      <InteriorDirectionButton
               label="▲"
               onClick={() => interiorDirectionBack(camPros, setTargetPos)}
             />
@@ -668,9 +664,12 @@ const LayoutCanvas = () => {
               label="▼"
               onClick={() => interiorDirectionNext(camPros, setTargetPos)}
             />
-          </div>
-        )}
-      </div>
+
+    </div>
+  )}
+</div>
+
+
 
       {/* Summary Modal */}
       {summaryModal && (
