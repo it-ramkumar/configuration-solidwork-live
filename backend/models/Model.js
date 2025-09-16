@@ -47,7 +47,14 @@ category: { type: String, required: true },
   extensionKey: {
     type: [String], // Array of strings
     default: []
-  }
+  },
+  colors: [
+    {
+      name: { type: String, required: true }, // e.g. "Graphite Grey"
+      hex: { type: String },                  // e.g. "#4B4B4B"
+      image: { type: String }                 // optional preview image
+    }
+  ]
 }, {
   timestamps: true // createdAt & updatedAt auto add ho jayenge
 });

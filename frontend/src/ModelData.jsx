@@ -296,6 +296,7 @@ const VanModel = [
       "Luxury build with dinette, elevator bed, aluminum bathroom, full kitchen, induction cooktop, and premium electrical system.",
     img: "./images/heather_144_layoutt.png",
     includes: [
+      "Flooring",
         "Kitchen Backsplash",
         "Vinyl Marine Woven flooring",
         "Front Jump Seat",
