@@ -296,8 +296,9 @@ const VanModel = [
       "Luxury build with dinette, elevator bed, aluminum bathroom, full kitchen, induction cooktop, and premium electrical system.",
     img: "./images/heather_144_layoutt.png",
     includes: [
-      "Flooring",
+        //"Flooring",
         "Kitchen Backsplash",
+        "Bamboo flooring",
         "Vinyl Marine Woven flooring",
         "Front Jump Seat",
         "Front Swivel Table with a Cup Holder",
@@ -329,7 +330,7 @@ const VanModel = [
         "Electric awning",
         "Monster Box",
         "Sherpa Cargo carrier",
-        "B2 Pro Box Carrier and Bike Rack",
+        //"B2 Pro Box Carrier and Bike Rack",
         "Powerlift bike rack",
         "Van Rear Storage Box",
         "Side Ladder",
@@ -640,7 +641,7 @@ let interiorModels = [
   {
     label: "Black Faucet Two",
     price: 1000,
-    image: "/images/faucet-two.png",
+    image: "/images/faucet-two .png",
     component: FaucetV2,
     type: "Faucet",
     group: "Behind the Passenger Seat",

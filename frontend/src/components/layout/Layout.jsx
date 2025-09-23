@@ -9,6 +9,9 @@ import { useSelector, useDispatch } from "react-redux";
 import { fetchModelAll } from "../../api/model/modelAll";
 
 const Layout = () => {
+    const addedModels = useSelector((state) => state.addedModels.addedModels);
+
+
   const dispatch = useDispatch();
   const modelAll = useSelector((state) => state.models.modelAll || []);
   const [selectedFeature, setSelectedFeature] = useState(null);
@@ -45,7 +48,7 @@ const Layout = () => {
       }
     };
     fetchData();
-  }, [dispatch]);
+  }, [dispatch]);``
 
   // Orientation handling
   useEffect(() => {
@@ -173,7 +176,7 @@ const Layout = () => {
                       <p className="text-neutral-700 text-sm">{selectedFeature.description}</p>
                     </>
                   ) : (
-                    <p className="text-neutral-500 text-sm italic">Select a feature to preview</p>
+                     <p className="text-neutral-500 text-sm italic">Select a feature to preview</p>
                   )}
                 </div> */}
               </div>

@@ -15,9 +15,19 @@ const AddedModelsSlice = createSlice({
     clearAddedModels: (state) => {
       state.addedModels = [];
     },
+    setPartColor: (state, action) => {
+  const { modelId, partId, color } = action.payload;
+  const model = state.addedModels.find(m => m._id === modelId);
+  if (model) {
+    const part = model.parts.find(p => p.label === partId);
+    if (part) {
+      part.selectedColor = color;
+    }
+  }
+},
   },
 });
 
-export const { setAddedModels, clearAddedModels } = AddedModelsSlice.actions;
+export const { setAddedModels, clearAddedModels, setPartColor } = AddedModelsSlice.actions;
 
 export default AddedModelsSlice.reducer;

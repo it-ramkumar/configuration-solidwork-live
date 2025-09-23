@@ -440,6 +440,14 @@ const LayoutCanvas = () => {
   const [loader, setLoader] = useState(true);
 
   const addedModels = useSelector((state) => state.addedModels.addedModels);
+//  console.log(addedModels);
+
+  const filteredData = addedModels.map(({ colors, ...rest }) => rest);
+
+  const [dataWithoutColor, setDataWithoutColor] = useState(filteredData);
+  console.log(dataWithoutColor);
+  
+  
   const selectModel = useSelector((state) => state.selectLayout.selectLayout);
   const allModels = useSelector((state) => state.models.modelAll || []);
 
@@ -551,7 +559,7 @@ const LayoutCanvas = () => {
         >
           <group
             ref={groupRef}
-            position={isIntView ? [0, -1.7, 0] : [0, -0.4, 0]}
+            position={isIntView ? [0, -1.7, 0] : [0, -1.1, 0]}
           >
             {addedModels.length > 0 ? (
               <>
